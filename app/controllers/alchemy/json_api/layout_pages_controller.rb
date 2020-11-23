@@ -5,7 +5,7 @@ module Alchemy
       private
 
       def page_scope
-        base_page_scope.layoutpages
+        base_scope_with_includes.layoutpages
       end
     end
   end
