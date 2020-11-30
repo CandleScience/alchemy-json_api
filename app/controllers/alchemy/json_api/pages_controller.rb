@@ -27,7 +27,7 @@ module Alchemy
                raise(ActiveRecord::RecordNotFound)
         return true unless page.cache_page?
 
-        stale?(etag: page.cache_key + params.to_s,
+        stale?(strong_etag: page.cache_key + params.to_s,
                last_modified: page.published_at,
                public: !page.restricted,
                template: false)
